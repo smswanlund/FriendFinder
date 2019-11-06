@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Friend Finder</title>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <div>
+            <nav class="navbar">
+                <a href="/" class="brand">Friend Finder</a>
+                <ul id="nav-links">
+                    <li class="nav-item"><a href="/survey">Survey</a></li>
+                    <li class="nav-item"><a href="/api/friends">Friend List</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="survey-content">
+
+                        <h1>Survey Questions</h1>
+                        <hr>
+
+                        <h3>Basic Info</h3>
+                        <div class="nameDiv col-md-6">
+
+                            <input id="userName" type="text" placeholder="Your Name (required)" class="validate">
+
+                        </div>
+
+                        <div class="picDiv col-md-6">
+
+                            <input id="userPic" type="text" placeholder="Photo Link Here" class="validate">
+
+                        </div>
+
+                        <form id="survey-questions col-md-12">
+                            <h2>5 = Strongly Agree, 1 = Strongly Disagree</h2>
+                        <div class="col-md-12" id="question1">
+                            <h3>Question 1</h3>
+                            <h5>I prefer to plan my activities.</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">5</label>
+                            </div>
+                        <div class="col-md-12" id="question2">
+                            <h3>Question 2</h3>
+                            <h5>I like the outdoors.</h5>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                </div>
+                            <div class="col-md-12" id="question3">
+                                <h3>Question 3</h3>
+                                <h5>I consider myself an introvert.</h5>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                </div>
+                            <div class="col-md-12" id="question4">
+                                                    <h3>Question 4</h3>
+                                                    <h5>I want to erase half of all life in the universe.</h5>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                    </div>
+                                                    <div class="col-md-12" id="question5">
+                                                            <h3>Question 5</h3>
+                                                            <h5>My work severely limits my social life.</h5>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                            </div>
+                                                            <div class="col-md-12" id="question6">
+                                                                    <h3>Question 6</h3>
+                                                                    <h5>I just want to dance.</h5>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                                    </div>
+                                                                    <div class="col-md-12" id="question7">
+                                                                            <h3>Question 7</h3>
+                                                                            <h5>I read "50 Shades of Grey".</h5>
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                                            </div>
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                                            </div>
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                                            </div>
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                                            </div>
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                                            </div>
+                                                                            <div class="col-md-12" id="question8">
+                                                                                    <h3>Question 8</h3>
+                                                                                    <h5>I believe that the "Starwars" prequels are underrated.</h5>
+                                                                                    <div class="form-check form-check-inline">
+                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                                                    </div>
+                                                                                    <div class="form-check form-check-inline">
+                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                        <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                                                    </div>
+                                                                                    <div class="form-check form-check-inline">
+                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                        <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                                                    </div>
+                                                                                    <div class="form-check form-check-inline">
+                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                        <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                                                    </div>
+                                                                                    <div class="form-check form-check-inline">
+                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                        <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12" id="question9">
+                                                                                            <h3>Question 9</h3>
+                                                                                            <h5>I believe that vaccines cause autism.</h5>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                                                            </div>
+                                                                                            <div class="col-md-12" id="question10">
+                                                                                                    <h3>Question 10</h3>
+                                                                                                    <h5>I liked the part of "Infinity War" where Thanos won.</h5>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                        <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                        <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                        <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                                                                                    </div>
+                                                                                                    <div class="form-check form-check-inline">
+                                                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                                                        <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                                                                                    </div>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-primary" type="submit" id="surveySubmit">Submit Survey</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="friendModal" class="modal row">
+                <div class="friendMatch col-md-12">
+                    <div class="friend-content">
+                        <h4>Closest Friend Match</h4>
+                        <h5 id="userMatch"></h5>
+                        <img id="userMatchImage" width="650" src="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+        $(document).ready(function() {
+            $("select").material_select();
+
+            $(".modal").modal({
+                dismissible:false,
+                opacity: .5,
+                inDuration: 300,
+                outDuration: 200,
+                startingTop:'4%',
+                endingTop:"10%"
+            });
+        });
+
+        $("#surveySubmit").on("click", function(event) {
+            event.preventDefault();
+
+            var userInput = {
+                name: $("#userName").val().trim(),
+                photo: $("#userPic").val().trim(),
+                scores: [
+                    $("#question1").val().trim(),
+                    $("#question2").val().trim(),
+                    $("#question3").val().trim(),
+                    $("#question4").val().trim(),
+                    $("#question5").val().trim(),
+                    $("#question6").val().trim(),
+                    $("#question7").val().trim(),
+                    $("#question8").val().trim(),
+                    $("#question9").val().trim(),
+                    $("#question10").val().trim()
+                ]
+            };
+
+            //  console.log("userInput = " + JSON.stringify(userInput));
+
+            $.post("/api/friends", userInput)
+            .done(function(data) {
+
+                //   console.log("response = " + JSON.stringify(data));
+
+                $("#userMatch").html(data.matchName);
+                $("#userMatchImage").attr("src", data.matchImage);
+
+                $("#friendModal").modal("open");
+            })
+        })
+        
+        </script>
+
+    </body>
+
+</html>
