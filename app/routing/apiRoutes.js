@@ -5,7 +5,7 @@ var friends = require("../data/friends.js");
 module.exports = function(app) {
 
     app.get("/api/friends", function(req, res) {
-        res.json(friends);
+        res.json(friendArray);
     });
 
     app.post("/api/friends", function(req, res) {
@@ -16,7 +16,7 @@ module.exports = function(app) {
         var matchImage="";
         var totalDifference = 10000;
 
-        for(var i=0; i < friends.length; i++) {
+        for(var i=0; i < friendArray.length; i++) {
 
             var diff = 0;
             for(var j = 0; j< userResponses.length; j++) {
@@ -25,12 +25,12 @@ module.exports = function(app) {
 
             if (diff<totalDifference) {
                 totalDifference = diff;
-                matchName = friends[i].name;
-                matchImage = friends[i].photo;
+                matchName = friendArray[i].name;
+                matchImage = friendArray[i].photo;
             }
         }
 
-        friends.push(userInput);
+        friendArray.push(userInput);
 
         res.json({status: "OK", matchName:matchName, matchImage:matchImage});
     });
